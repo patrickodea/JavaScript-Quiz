@@ -1,9 +1,9 @@
-var time = document.getElementById("time");
+var timer = document.querySelector(".timer");
 
 
 var secondsLeft = 75;
 
-function setTime(){
+function startTime(){
     var timerInterval = setInterval(function(){
     secondsLeft--;
     time.textContent = "Time: " + secondsLeft;

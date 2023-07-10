@@ -1,6 +1,13 @@
-#time {
+
+
+h1{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.timer {
     color: black;
-    text-align: right;
 }
 
 h2{
@@ -13,9 +20,12 @@ p {
     font-size: 20px;
 }
 
-#button{
+button{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: purple;
+    color: white;
+    font-size: 25px;
 }
 
