@@ -7,8 +7,16 @@ h1{
 }
 
 .timer {
+    display: flex;
+    justify-content: right;
     color: black;
 }
+
+#highScores {
+    display: flex;
+    justify-content: left;
+}
+
 
 h2{
     text-align: center;
