@@ -1,11 +1,11 @@
-var startQuiz = document.querySelector("#button")
+var buttonClick = document.querySelector("#button");
 var timer = document.querySelector(".timer");
-var secondsLeft = 75;
+var quiz = document.querySelector("#quiz");
+var secondsLeft = 76;
 
-    function setTime(){ 
-
+    function setTime(event){ 
+        event.preventDefault(setTime);
     var timeEnd = setInterval(function() {
-
         secondsLeft--;
         timer.textContent = "Time Left: " + secondsLeft;
 
@@ -16,13 +16,22 @@ var secondsLeft = 75;
     }, 1000);
  }
 
+    function quizQuestions(){
+        var quizQuestions = document.getElementById("#quiz")
+ }   
+
+
+
+
+
+ buttonClick.addEventListener("click", setTime);
+ buttonClick.addEventListener("click", quizQuestions);
 
 
 
 function sendMessage(){
     timer.textContent = " ";
-    var timeUp = document.createElement ("h1");
+    var timeEnd = document.createElement ("h1");
     h1.setAttribute("Times Up!");
 
 }
-setTime();
