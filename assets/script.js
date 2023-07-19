@@ -1,6 +1,6 @@
 var buttonClick = document.querySelector("#button");
 var timer = document.querySelector(".timer");
-var quiz = document.querySelector("#quiz");
+
 var secondsLeft = 76;
 
     function setTime(event){ 
@@ -16,11 +16,15 @@ var secondsLeft = 76;
     }, 1000);
  }
 
-    function quizQuestions(){
-        var quizQuestions = document.getElementById("#quiz")
- }   
+ function quizQuestions(){
+    var quizQuestion = "Inside which HTML element do we put the JavaScript?";
+    var questionElement = document.querySelector("#question");
+    var descriptionElement = document.querySelector("#quiz-description");
 
-
+    questionElement.textContent = quizQuestion;
+    descriptionElement.style.display = "none";
+    buttonClick.style.display="none";
+ }
 
 
 
