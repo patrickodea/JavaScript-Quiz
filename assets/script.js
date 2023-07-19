@@ -24,6 +24,19 @@ var secondsLeft = 76;
     questionElement.textContent = quizQuestion;
     descriptionElement.style.display = "none";
     buttonClick.style.display="none";
+
+
+    var answerElement = document.querySelector("#answer");
+
+    var answerOptions = ["<script>", "<javascript>", "<js>", "<java-s>"];
+
+    answerOptions.forEach(function(option){
+        var li = document.createElement("button");
+        li.textContent = option;
+        answerElement.appendChild(li);
+    });
+
+
  }
 
 
