@@ -21,7 +21,6 @@ var secondsLeft = 76;
 }
 
 
-
 function quizQuestionOne(event) {
     event.preventDefault();
     var homepageSection = document.querySelector("section");
@@ -29,29 +28,13 @@ function quizQuestionOne(event) {
     quizSection.innerHTML = `
     <h2>Question 1</h2>
     <p>Inside which HTML Element do we put the JS?</p>
-    <button>script</button>
-    <button>javascript</button>
-    <button>js</button>
-    <button>scripting</button>
+    <button id="answer1">script</button>
+    <button id="answer2">javascript</button>
+    <button id="answer3">js</button>
+    <button id="answer4">scripting</button>
     `;
     homepageSection.style.display = "none";
     document.body.appendChild(quizSection);
-}
-
-
-
-
-buttonClick.addEventListener("click", setTime);
-buttonClick.addEventListener("click", quizQuestionOne);
-
-
-
-function sendMessage(){
-    timer.textContent = " ";
-    var timeEnd = document.createElement ("h1");
-    timeEnd.textContent = "Times Up";
-    document.body.appendChild(timeEnd);
-
 }
 
 
