@@ -53,3 +53,17 @@ function sendMessage(){
     document.body.appendChild(timeEnd);
 
 }
+
+
+buttonClick.addEventListener("click", setTime);
+buttonClick.addEventListener("click", quizQuestionOne);
+
+
+
+function sendMessage(){
+    timer.textContent = " ";
+    var timeEnd = document.createElement ("h1");
+    timeEnd.textContent = "Times Up";
+    document.body.appendChild(timeEnd);
+
+}
