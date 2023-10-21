@@ -34,10 +34,8 @@ var quizQuestions = [
         secondsLeft--;
         timer.textContent = "Time Left: " + secondsLeft;
 
-        if(secondsLeft === 0){
+        if (secondsLeft === 0 || currentQuestion >= quizQuestions.length) {
             clearInterval(timeEnd);
-            var quizSection = document.getElementById("quiz");
-            quizSection.style.display = "none";
             sendMessage();
         }
     }, 1000);
@@ -78,7 +76,7 @@ function quizQuestionOne(event) {
         } else {
             endGame();
         }
-      });
+    });
     });
 }
 
@@ -86,10 +84,29 @@ function sendMessage(){
     timer.textContent = " ";
     var timeEnd = document.createElement ("h1");
     timeEnd.textContent = "Times Up";
-    var initials = prompt("Enter your initials");
     document.body.appendChild(timeEnd);
 
 }
 
 buttonClick.addEventListener("click", setTime);
 buttonClick.addEventListener("click", quizQuestionOne);
+
+var submitInitialsButton = document.querySelector("#submitInitials");
+var initialsInput = document.querySelector("#initialsInput");
+
+submitInitialsButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    var initials = initialsInput.value;
+    set_LocalStorage("initials", initials);
+    showHighScores();
+});
+
+function showHighScores() {
+    var storedInitials = get_LocalStorage("initials");
+    var storedScore = get_LocalStorage("score");
+    if (storedInitials && storedScore) {
+        alert("Initials: " + storedInitials + "\nScore: " + storedScore);
+    } else {
+        alert("No high score available.");
+    }
+}
